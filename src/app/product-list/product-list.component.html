@@ -1,1 +1,4 @@
-<p>product-list works!</p>
+<h2>Child component</h2>
+<label for="">Enter child component details: </label>
+<input type="text" #childtext (keyup)="onChange(childtext.value)"><br>
+<label for="">Value of the parent component is : {{parentData}}</label>

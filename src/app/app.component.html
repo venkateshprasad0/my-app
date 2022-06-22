@@ -1,7 +1,18 @@
 <div>
-  <p>Hello!</p>
+  <p>Hello There!</p>
 </div>
 
-<app-product-list></app-product-list>
+
+<h2>
+  Parent Component
+</h2>
+
+<label for="">Enter Parent component value:</label>
+<input type="text" #pdata (keyup)="0"> <br>
+<label for="">Value from child component is: {{childData}}</label>
+<app-product-list (childEvent)="catchChildEvent($event)"
+ [parentData]="pdata.value">
+
+</app-product-list>
 
 <router-outlet></router-outlet>
