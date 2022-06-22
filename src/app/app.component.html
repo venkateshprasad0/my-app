@@ -12,7 +12,15 @@
 <label for="">Value from child component is: {{childData}}</label>
 <app-product-list (childEvent)="catchChildEvent($event)"
  [parentData]="pdata.value">
-
 </app-product-list>
+<br>
+<h2>Location component</h2>
+<label for="">Enter location: </label>
+<input type="text" #locationData (keyup)="0"> <br>
+<app-location
+  [locationData]="locationData.value">
+
+</app-location>
+
 
 <router-outlet></router-outlet>

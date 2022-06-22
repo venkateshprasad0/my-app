@@ -8,9 +8,14 @@ import { Component, Input } from '@angular/core';
 export class AppComponent {
   title = 'my-app';
   childData:string="";
+  locationData:string="";
 
   catchChildEvent($event:string){
     this.childData=$event;
+  }
+
+  catchLocationEvent($event:string){
+    this.locationData=$event;
   }
 }
 
